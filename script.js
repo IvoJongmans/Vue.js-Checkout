@@ -15,6 +15,15 @@ var app = new Vue({
         },
         datetoday: function(){
             return  new Date();
+        },
+    },
+    methods: {
+        resetForm: function(){
+            this.fname = "";
+            this.lname = "";
+            this.email = "";
+            this.city = ""
+            this.nb = "No";
         }
     }
 

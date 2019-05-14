@@ -22,8 +22,10 @@
         </div>
     </div>
 </div>
+
 <div class="container" id="app">
     <div class="row">
+    <form method="POST" id="form1">
     <div class="col-sm-6">
         
         <input type="text" v-model="fname" id="fname" placeholder="First Name">
@@ -42,6 +44,7 @@
     <div class="col-sm-6">
         Yes: <input type="radio" v-model="nb" value="Yes" >
         No: <input type="radio" v-model="nb" value="No">
+    
     </div>
     <div class="col-sm-12">
         <h1>Summary</h1>
@@ -55,6 +58,11 @@
     <div class="col-sm-12">
         <h1>Terms of Service</h1>
         I, {{fullname}} hereby declare that I accept the terms of service on {{datetoday}}.
+    </div>
+    </form> 
+    <div class="col-sm-12">
+    <button v-on:click="resetForm" type="reset">Reset</button>
+    <button type="submit" form="form1">Submit</button>
     </div>
     </div>
 </div>
