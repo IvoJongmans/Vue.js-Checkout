@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.scss">
+    <title>Vue JS Checkout</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Register</h1>
+        </div>
+    </div>
+</div>
+<div class="container" id="app">
+    <div class="row">
+    <div class="col-sm-6">
+        
+        <input type="text" v-model="fname" id="fname" placeholder="First Name">
+    </div>
+    <div class="col-sm-6">
+        
+        <input type="text" v-model="lname" id="lname" placeholder="Last Name">
+    </div>
+    <div class="col-sm-6">
+        
+        <input type="text" v-model="email" id="email" placeholder="E-mail">
+    </div>
+    <div class="col-sm-6">
+       <input type="text" v-model="city" placeholder="City">
+    </div>
+    <div class="col-sm-6">
+        Yes: <input type="radio" v-model="nb" value="Yes" >
+        No: <input type="radio" v-model="nb" value="No">
+    </div>
+    <div class="col-sm-12">
+        <h1>Summary</h1>
+    </div>
+    <div class="col-sm-12">
+        Name: {{fullname}} <br/>
+        E-mail: {{email}} <br/>
+        City: {{city}} <br/>
+        Newsletter: {{nb}}
+    </div>
+    <div class="col-sm-12">
+        <h1>Terms of Service</h1>
+        I, {{fullname}} hereby declare that I accept the terms of service on {{datetoday}}.
+    </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
